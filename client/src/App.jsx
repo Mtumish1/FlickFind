@@ -1,10 +1,10 @@
 // Import React core library
 import React from "react";
-
+import Navbar from "./components/Navbar";
 // Import components from react-router-dom for routing
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import pages (we'll create these files next)
+// Import pages 
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import MovieDetails from "./pages/MovieDetails";
@@ -18,6 +18,9 @@ function App() {
       {/* Main app container */}
       <div className="min-h-screen bg-gray-100">
         
+        {/* Include Navbar at the top of the page */}
+        <Navbar />
+
         {/* Define routes for different pages */}
         <Routes>
           {/* Home page */}
