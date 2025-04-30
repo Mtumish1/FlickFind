@@ -1,7 +1,6 @@
-// Import React core library
+
 import React from "react";
 import Navbar from "./components/Navbar";
-// Import components from react-router-dom for routing
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import pages 
@@ -16,30 +15,16 @@ function App() {
     // Router wraps the whole app to enable routing
     <Router>
       {/* Main app container */}
-      <div className="min-h-screen bg-gray-100">
-        
-        {/* Include Navbar at the top of the page */}
-        <Navbar />
-
-        {/* Define routes for different pages */}
-        <Routes>
-          {/* Home page */}
-          <Route path="/" element={<Home />} />
-
-          {/* Search page */}
-          <Route path="/search" element={<Search />} />
-
-          {/* Movie details page with dynamic id */}
-          <Route path="/movie/:id" element={<MovieDetails />} />
-
-          {/* Login page */}
-          <Route path="/login" element={<Login />} />
-
-          {/* Favorites page (for logged-in users) */}
-          <Route path="/favorites" element={<Favorites />} />
-        </Routes>
-
-      </div>
+      <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
+    </>
     </Router>
   );
 }
